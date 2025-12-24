@@ -1,0 +1,28 @@
+/**
+ * Joinery Spacing Tokens
+ * 
+ * Semantic spacing based on relationship between elements, not arbitrary values.
+ * Choose based on *intent*: how related are these elements?
+ * 
+ * tight    → Inline elements, icon + text, tightly coupled items
+ * related  → Items that belong together (form field + label, card content)
+ * distinct → Separate but grouped (cards in a grid, list items)
+ * section  → Major content divisions within a page
+ * page     → Page-level separation (hero to content, footer gap)
+ * 
+ * Based on a ~2x progression for simplicity:
+ * 0.25 → 0.75 → 1.5 → 3 → 6
+ */
+
+:root {
+  --joinery-space-unit: 1rem;
+  --joinery-space-tight: 0.25rem;
+  --joinery-space-related: 0.75rem;
+  --joinery-space-distinct: 1.5rem;
+  --joinery-space-section: 3rem;
+  --joinery-space-page: 6rem;
+  --joinery-space-tight-2: 0.5rem;
+  --joinery-space-related-2: 1rem;
+  --joinery-space-distinct-2: 2rem;
+  --joinery-space-section-2: 4.5rem;
+}

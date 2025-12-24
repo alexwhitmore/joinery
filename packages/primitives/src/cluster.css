@@ -1,0 +1,105 @@
+/**
+ * Joinery Cluster Primitive
+ * 
+ * Groups elements horizontally with automatic wrapping.
+ * Uses flexbox gap for spacing - no negative margin hacks.
+ * 
+ * Perfect for: tags, buttons, navigation items, meta info, badges.
+ * 
+ * Usage:
+ *   <div class="cluster">
+ *     <span>Tag 1</span>
+ *     <span>Tag 2</span>
+ *     <span>Tag 3</span>
+ *   </div>
+ * 
+ * With semantic gaps:
+ *   <div class="cluster" data-gap="tight">...</div>
+ * 
+ * With justify/align:
+ *   <div class="cluster" data-justify="between" data-align="center">...</div>
+ */
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--joinery-cluster-gap, var(--joinery-space-related, 0.75rem));
+
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cluster[data-gap='none'] {
+  --joinery-cluster-gap: 0;
+}
+
+.cluster[data-gap='tight'] {
+  --joinery-cluster-gap: var(--joinery-space-tight, 0.25rem);
+}
+
+.cluster[data-gap='related'] {
+  --joinery-cluster-gap: var(--joinery-space-related, 0.75rem);
+}
+
+.cluster[data-gap='distinct'] {
+  --joinery-cluster-gap: var(--joinery-space-distinct, 1.5rem);
+}
+
+.cluster[data-justify='start'] {
+  justify-content: flex-start;
+}
+
+.cluster[data-justify='center'] {
+  justify-content: center;
+}
+
+.cluster[data-justify='end'] {
+  justify-content: flex-end;
+}
+
+.cluster[data-justify='between'] {
+  justify-content: space-between;
+}
+
+.cluster[data-justify='around'] {
+  justify-content: space-around;
+}
+
+.cluster[data-justify='evenly'] {
+  justify-content: space-evenly;
+}
+
+.cluster[data-align='start'] {
+  align-items: flex-start;
+}
+
+.cluster[data-align='center'] {
+  align-items: center;
+}
+
+.cluster[data-align='end'] {
+  align-items: flex-end;
+}
+
+.cluster[data-align='stretch'] {
+  align-items: stretch;
+}
+
+.cluster[data-align='baseline'] {
+  align-items: baseline;
+}
+
+.cluster[data-pattern='header'] {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cluster[data-pattern='center'] {
+  justify-content: center;
+  align-items: center;
+}
+
+.cluster[data-pattern='actions'] {
+  justify-content: flex-end;
+  align-items: center;
+}

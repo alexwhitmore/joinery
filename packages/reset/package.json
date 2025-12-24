@@ -1,0 +1,29 @@
+{
+  "name": "@joinery/reset",
+  "version": "0.1.0",
+  "description": "Modern CSS reset with prose-first defaults",
+  "type": "module",
+  "main": "./dist/index.css",
+  "exports": {
+    ".": "./dist/index.css",
+    "./reset": "./dist/reset.css",
+    "./prose": "./dist/prose.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "mkdir -p dist && cp src/*.css dist/",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "css-reset",
+    "normalize",
+    "typography",
+    "prose"
+  ],
+  "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ]
+}

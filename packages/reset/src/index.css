@@ -1,0 +1,17 @@
+/**
+ * Joinery Reset + Prose Defaults
+ * 
+ * Import this for a complete "prose-first" foundation.
+ * Everything is readable by default. Opt out for UI chrome.
+ * 
+ * Requires: @joinery/tokens (or define the CSS custom properties yourself)
+ * 
+ * @import '@joinery/reset';
+ * 
+ * Or import individually:
+ * @import '@joinery/reset/reset';  -- just the reset, no prose defaults
+ * @import '@joinery/reset/prose';  -- just the prose defaults
+ */
+
+@import './reset.css';
+@import './prose.css';

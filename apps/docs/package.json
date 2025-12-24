@@ -1,0 +1,9 @@
+{
+  "name": "@joinery/docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Docs site not yet implemented'",
+    "build": "echo 'Docs site not yet implemented'"
+  }
+}

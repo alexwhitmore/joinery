@@ -1,0 +1,30 @@
+/**
+ * Joinery Radius Tokens
+ * 
+ * Semantic border-radius values.
+ * Choose based on how rounded you want the element.
+ * 
+ * none    → Sharp corners (0)
+ * subtle  → Barely rounded, softens without being "round"
+ * rounded → Standard rounding, the default for most UI
+ * pill    → Fully rounded ends (buttons, tags, badges)
+ * full    → Circle (for square elements like avatars)
+ */
+
+:root {
+  --joinery-radius-none: 0;
+  --joinery-radius-subtle: 0.25rem;
+  --joinery-radius-rounded: 0.5rem;
+  --joinery-radius-pill: 9999px;
+  --joinery-radius-full: 50%;
+
+  /*
+   * Additional intermediate values for fine-tuning.
+   * Use sparingly - prefer the core tokens above.
+   */
+  --joinery-radius-sm: 0.125rem;
+  --joinery-radius-md: 0.375rem;
+  --joinery-radius-lg: 0.75rem;
+  --joinery-radius-xl: 1rem;
+  --joinery-radius-2xl: 1.5rem;
+}

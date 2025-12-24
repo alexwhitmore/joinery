@@ -1,0 +1,41 @@
+/**
+ * Joinery Typography Tokens
+ * 
+ * Fluid type scale using clamp() for smooth scaling between viewports.
+ * No breakpoints needed - typography adapts continuously.
+ * 
+ * Format: clamp(min, preferred, max)
+ * - min: smallest size (mobile)
+ * - preferred: fluid calculation (scales with viewport)
+ * - max: largest size (desktop)
+ * 
+ * Scale ratio: ~1.25 (Major Third) - balanced for both mobile and desktop
+ */
+
+:root {
+  --joinery-text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --joinery-text-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);
+  --joinery-text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --joinery-text-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
+  --joinery-text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --joinery-text-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --joinery-text-3xl: clamp(1.875rem, 1.55rem + 1.625vw, 2.5rem);
+  --joinery-text-4xl: clamp(2.25rem, 1.75rem + 2.5vw, 3.5rem);
+  --joinery-text-5xl: clamp(2.75rem, 2rem + 3.75vw, 4.5rem);
+
+  --joinery-leading-none: 1;
+  --joinery-leading-tight: 1.2;
+  --joinery-leading-snug: 1.35;
+  --joinery-leading-normal: 1.5;
+  --joinery-leading-relaxed: 1.65;
+  --joinery-leading-loose: 1.8;
+  --joinery-weight-normal: 400;
+  --joinery-weight-medium: 500;
+  --joinery-weight-semibold: 600;
+  --joinery-weight-bold: 700;
+  --joinery-tracking-tighter: -0.03em;
+  --joinery-tracking-tight: -0.015em;
+  --joinery-tracking-normal: 0;
+  --joinery-tracking-wide: 0.025em;
+  --joinery-tracking-wider: 0.05em;
+}

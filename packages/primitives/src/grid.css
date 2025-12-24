@@ -1,0 +1,108 @@
+/**
+ * Joinery Grid Primitive
+ * 
+ * Auto-fit responsive grid using CSS Grid.
+ * Columns are created dynamically based on minimum width and available space.
+ * No breakpoints needed - the grid adapts automatically.
+ * 
+ * Uses the min() function to prevent overflow on narrow viewports.
+ * Falls back to single column if min() isn't supported (very old browsers).
+ * 
+ * Usage:
+ *   <div class="grid">
+ *     <div>Item 1</div>
+ *     <div>Item 2</div>
+ *     <div>Item 3</div>
+ *   </div>
+ * 
+ * With different minimum widths:
+ *   <div class="grid" data-min="lg">...</div>
+ * 
+ * With semantic gaps:
+ *   <div class="grid" data-gap="distinct">...</div>
+ */
+
+.grid {
+  display: grid;
+  gap: var(--joinery-grid-gap, var(--joinery-space-related, 0.75rem));
+
+  --joinery-grid-min: var(--joinery-grid-min-width, 15rem);
+}
+
+@supports (width: min(var(--joinery-grid-min), 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--joinery-grid-min), 100%), 1fr));
+  }
+}
+
+.grid[data-min='sm'] {
+  --joinery-grid-min: 10rem;
+}
+
+.grid[data-min='md'] {
+  --joinery-grid-min: 15rem;
+}
+
+.grid[data-min='lg'] {
+  --joinery-grid-min: 20rem;
+}
+
+.grid[data-min='xl'] {
+  --joinery-grid-min: 25rem;
+}
+
+.grid[data-min='prose'] {
+  --joinery-grid-min: 30ch;
+}
+
+.grid[data-gap='none'] {
+  --joinery-grid-gap: 0;
+}
+
+.grid[data-gap='tight'] {
+  --joinery-grid-gap: var(--joinery-space-tight, 0.25rem);
+}
+
+.grid[data-gap='related'] {
+  --joinery-grid-gap: var(--joinery-space-related, 0.75rem);
+}
+
+.grid[data-gap='distinct'] {
+  --joinery-grid-gap: var(--joinery-space-distinct, 1.5rem);
+}
+
+.grid[data-gap='section'] {
+  --joinery-grid-gap: var(--joinery-space-section, 3rem);
+}
+
+.grid[data-cols='2'] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid[data-cols='3'] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid[data-cols='4'] {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 40rem) {
+  .grid[data-cols='2'],
+  .grid[data-cols='3'],
+  .grid[data-cols='4'] {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid[data-align='start'] {
+  align-items: start;
+}
+
+.grid[data-align='center'] {
+  align-items: center;
+}
+
+.grid[data-align='end'] {
+  align-items: end;
+}

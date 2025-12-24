@@ -1,0 +1,44 @@
+{
+  "name": "@joinery/primitives",
+  "version": "0.1.0",
+  "description": "Layout primitives for Joinery - Stack, Cluster, Grid, and more",
+  "type": "module",
+  "main": "./dist/index.css",
+  "exports": {
+    ".": "./dist/index.css",
+    "./stack": "./dist/stack.css",
+    "./cluster": "./dist/cluster.css",
+    "./grid": "./dist/grid.css",
+    "./center": "./dist/center.css",
+    "./box": "./dist/box.css",
+    "./sidebar": "./dist/sidebar.css",
+    "./switcher": "./dist/switcher.css",
+    "./cover": "./dist/cover.css",
+    "./frame": "./dist/frame.css",
+    "./reel": "./dist/reel.css",
+    "./imposter": "./dist/imposter.css",
+    "./surface": "./dist/surface.css",
+    "./prose": "./dist/prose.css",
+    "./section": "./dist/section.css",
+    "./page": "./dist/page.css",
+    "./split": "./dist/split.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "mkdir -p dist && cp src/*.css dist/",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "layout",
+    "css",
+    "primitives",
+    "every-layout",
+    "design-system"
+  ],
+  "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ]
+}

@@ -1,0 +1,32 @@
+/**
+ * Joinery Elevation Tokens
+ * 
+ * Semantic elevation levels for surfaces.
+ * Choose based on how "raised" the element should appear.
+ * 
+ * inset    → Pressed/sunken elements (inputs, wells)
+ * flat     → No elevation, sits on the page (default)
+ * raised   → Slightly lifted (cards, buttons)
+ * floating → Significantly lifted (modals, popovers, dropdowns)
+ * 
+ * Shadows use multiple layers for more realistic depth.
+ */
+
+:root {
+  --joinery-shadow-inset: inset 0 1px 2px 0 rgb(0 0 0 / 0.075);
+  --joinery-shadow-flat: none;
+  --joinery-shadow-raised: 0 1px 2px 0 rgb(0 0 0 / 0.05), 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  --joinery-shadow-floating: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 20px 25px -5px rgb(0 0 0 / 0.05);
+  --joinery-elevation-inset: var(--joinery-shadow-inset);
+  --joinery-elevation-flat: var(--joinery-shadow-flat);
+  --joinery-elevation-raised: var(--joinery-shadow-raised);
+  --joinery-elevation-floating: var(--joinery-shadow-floating);
+  --joinery-z-base: 0;
+  --joinery-z-raised: 10;
+  --joinery-z-dropdown: 100;
+  --joinery-z-sticky: 200;
+  --joinery-z-modal: 300;
+  --joinery-z-popover: 400;
+  --joinery-z-toast: 500;
+}

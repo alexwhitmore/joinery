@@ -1,0 +1,20 @@
+/**
+ * Joinery Measure Tokens
+ * 
+ * Controls maximum line length for readability.
+ * Uses `ch` unit (character width) so measure adapts to font size.
+ * 
+ * From "The Elements of Typographic Style": 
+ * Optimal measure is 45-75 characters per line.
+ * 
+ * narrow → Sidebars, captions, constrained spaces
+ * prose  → Body text, articles, primary reading content
+ * wide   → Tables, code blocks, data-heavy content
+ */
+
+:root {
+  --joinery-measure-narrow: 45ch;
+  --joinery-measure-prose: 65ch;
+  --joinery-measure-wide: 85ch;
+  --joinery-measure: var(--joinery-measure-prose);
+}

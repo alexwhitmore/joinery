@@ -1,0 +1,91 @@
+/**
+ * Joinery Stack Primitive
+ * 
+ * Injects vertical space between child elements.
+ * Based on Every Layout's Stack: style the context, not the elements.
+ * 
+ * The "owl selector" (* + *) applies margin only between adjacent siblings,
+ * eliminating trailing margins that cause double-spacing.
+ * 
+ * Usage:
+ *   <div class="stack">
+ *     <div>First</div>
+ *     <div>Second</div>
+ *     <div>Third</div>
+ *   </div>
+ * 
+ * With semantic gaps (via data attribute):
+ *   <div class="stack" data-gap="section">...</div>
+ * 
+ * Recursive mode (affects all descendants):
+ *   <div class="stack" data-recursive>...</div>
+ * 
+ * Splitting (push elements to bottom):
+ *   <div class="stack" data-split-after="2">...</div>
+ */
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--joinery-stack-gap, var(--joinery-space-related, 0.75rem));
+}
+
+.stack[data-gap='none'] {
+  --joinery-stack-gap: 0;
+}
+
+.stack[data-gap='tight'] {
+  --joinery-stack-gap: var(--joinery-space-tight, 0.25rem);
+}
+
+.stack[data-gap='related'] {
+  --joinery-stack-gap: var(--joinery-space-related, 0.75rem);
+}
+
+.stack[data-gap='distinct'] {
+  --joinery-stack-gap: var(--joinery-space-distinct, 1.5rem);
+}
+
+.stack[data-gap='section'] {
+  --joinery-stack-gap: var(--joinery-space-section, 3rem);
+}
+
+.stack[data-gap='page'] {
+  --joinery-stack-gap: var(--joinery-space-page, 6rem);
+}
+
+.stack[data-recursive] * + * {
+  margin-block-start: var(--joinery-stack-gap, var(--joinery-space-related, 0.75rem));
+}
+
+.stack:only-child {
+  block-size: 100%;
+}
+
+.stack[data-split-after='1'] > :nth-child(1) {
+  margin-block-end: auto;
+}
+
+.stack[data-split-after='2'] > :nth-child(2) {
+  margin-block-end: auto;
+}
+
+.stack[data-split-after='3'] > :nth-child(3) {
+  margin-block-end: auto;
+}
+
+.stack[data-split-after='4'] > :nth-child(4) {
+  margin-block-end: auto;
+}
+
+.stack[data-split-after='5'] > :nth-child(5) {
+  margin-block-end: auto;
+}

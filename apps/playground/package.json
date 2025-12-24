@@ -1,0 +1,9 @@
+{
+  "name": "@joinery/playground",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Playground not yet implemented'",
+    "build": "echo 'Playground not yet implemented'"
+  }
+}

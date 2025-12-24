@@ -1,0 +1,59 @@
+{
+  "name": "@joinery/react",
+  "version": "0.1.0",
+  "description": "React components for Joinery layout primitives",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./Stack": {
+      "types": "./dist/Stack.d.ts",
+      "import": "./dist/Stack.js"
+    },
+    "./Cluster": {
+      "types": "./dist/Cluster.d.ts",
+      "import": "./dist/Cluster.js"
+    },
+    "./Grid": {
+      "types": "./dist/Grid.d.ts",
+      "import": "./dist/Grid.js"
+    },
+    "./Center": {
+      "types": "./dist/Center.d.ts",
+      "import": "./dist/Center.js"
+    },
+    "./Box": {
+      "types": "./dist/Box.d.ts",
+      "import": "./dist/Box.js"
+    },
+    "./Surface": {
+      "types": "./dist/Surface.d.ts",
+      "import": "./dist/Surface.js"
+    },
+    "./Prose": {
+      "types": "./dist/Prose.d.ts",
+      "import": "./dist/Prose.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "typescript": "^5.7.0"
+  },
+  "keywords": ["react", "components", "layout", "design-system"],
+  "license": "MIT",
+  "sideEffects": false
+}

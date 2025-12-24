@@ -1,0 +1,72 @@
+/**
+ * Joinery Center Primitive
+ * 
+ * Horizontally centers content with a max-width for readability.
+ * Uses auto margins for centering, with optional gutters.
+ * 
+ * The Center is your go-to for creating readable content columns.
+ * Nest a Stack inside a Center for typical article layouts.
+ * 
+ * Usage:
+ *   <div class="center">
+ *     <article>Centered content with readable measure</article>
+ *   </div>
+ * 
+ * With different measures:
+ *   <div class="center" data-measure="wide">...</div>
+ * 
+ * With intrinsic centering (centers narrow children):
+ *   <div class="center" data-intrinsic>...</div>
+ * 
+ * Without gutters:
+ *   <div class="center" data-no-gutters>...</div>
+ */
+
+.center {
+  box-sizing: content-box;
+
+  max-inline-size: var(--joinery-center-measure, var(--joinery-measure-prose, 65ch));
+
+  margin-inline: auto;
+
+  padding-inline: var(--joinery-center-gutters, var(--joinery-space-related, 0.75rem));
+}
+
+.center[data-measure='narrow'] {
+  --joinery-center-measure: var(--joinery-measure-narrow, 45ch);
+}
+
+.center[data-measure='prose'] {
+  --joinery-center-measure: var(--joinery-measure-prose, 65ch);
+}
+
+.center[data-measure='wide'] {
+  --joinery-center-measure: var(--joinery-measure-wide, 85ch);
+}
+
+.center[data-measure='full'] {
+  --joinery-center-measure: none;
+}
+
+.center[data-intrinsic] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center[data-text-center] {
+  text-align: center;
+}
+
+.center[data-no-gutters] {
+  --joinery-center-gutters: 0;
+  padding-inline: 0;
+}
+
+.center[data-gutters='distinct'] {
+  --joinery-center-gutters: var(--joinery-space-distinct, 1.5rem);
+}
+
+.center[data-gutters='section'] {
+  --joinery-center-gutters: var(--joinery-space-section, 3rem);
+}

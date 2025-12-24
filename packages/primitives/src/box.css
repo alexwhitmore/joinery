@@ -1,0 +1,95 @@
+/**
+ * Joinery Box Primitive
+ * 
+ * A simple container with padding and optional border/background.
+ * The Box handles intrinsic styles - padding, border, background.
+ * 
+ * Why a Box? Separates concerns:
+ * - Stack handles vertical spacing between elements
+ * - Cluster handles horizontal groupings  
+ * - Box handles the internal padding of individual elements
+ * 
+ * Usage:
+ *   <div class="box">
+ *     <p>Content with consistent padding</p>
+ *   </div>
+ * 
+ * With semantic padding:
+ *   <div class="box" data-padding="distinct">...</div>
+ */
+
+.box {
+  padding: var(--joinery-box-padding, var(--joinery-space-related, 0.75rem));
+
+  border: var(--joinery-box-border-width, 1px) solid var(--border, currentColor);
+  border-radius: var(--joinery-radius-rounded, 0.5rem);
+
+  color: inherit;
+  background-color: transparent;
+
+  outline: 0.125rem solid transparent;
+  outline-offset: -0.125rem;
+}
+
+.box * {
+  color: inherit;
+}
+
+.box[data-padding='none'] {
+  --joinery-box-padding: 0;
+}
+
+.box[data-padding='tight'] {
+  --joinery-box-padding: var(--joinery-space-tight, 0.25rem);
+}
+
+.box[data-padding='related'] {
+  --joinery-box-padding: var(--joinery-space-related, 0.75rem);
+}
+
+.box[data-padding='distinct'] {
+  --joinery-box-padding: var(--joinery-space-distinct, 1.5rem);
+}
+
+.box[data-padding='section'] {
+  --joinery-box-padding: var(--joinery-space-section, 3rem);
+}
+
+.box[data-border='none'] {
+  --joinery-box-border-width: 0;
+  border: none;
+}
+
+.box[data-border='thin'] {
+  --joinery-box-border-width: 1px;
+}
+
+.box[data-border='medium'] {
+  --joinery-box-border-width: 2px;
+}
+
+.box[data-border='thick'] {
+  --joinery-box-border-width: 3px;
+}
+
+.box[data-invert] {
+  color: var(--background, #ffffff);
+  background-color: var(--foreground, #1a1a1a);
+}
+
+.box[data-pattern='card'] {
+  border: none;
+  background-color: var(--card, var(--background, #ffffff));
+  box-shadow: var(--joinery-elevation-raised);
+}
+
+.box[data-pattern='filled'] {
+  border: none;
+  background-color: var(--muted, #f5f5f5);
+}
+
+.box[data-pattern='well'] {
+  border: none;
+  background-color: var(--muted, #f5f5f5);
+  box-shadow: var(--joinery-elevation-inset);
+}

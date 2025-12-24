@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joinery - Intent-Driven Design System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="banner">
+      <div class="center" data-measure="wide">
+        <div class="cluster" data-justify="center" data-gap="tight">
+          <span class="badge">New</span>
+          <span>Joinery v0.1 is here — semantic layouts for modern web apps</span>
+          <a href="#" class="banner-link">Read the announcement →</a>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="center" data-measure="wide">
+        <div class="cluster" data-justify="between" data-align="center">
+          <div class="cluster" data-gap="distinct">
+            <a href="/" class="logo">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              Joinery
+            </a>
+            <nav class="nav-desktop">
+              <ul class="cluster" data-gap="related">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#primitives">Primitives</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#docs">Docs</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="cluster" data-gap="tight">
+            <a href="#" class="button button--ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="#" class="button button--secondary">Sign in</a>
+            <a href="#" class="button button--primary">
+              Get Started
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="center">
+          <div class="stack" data-gap="distinct" style="text-align: center">
+            <div>
+              <span class="badge badge--outline">Open Source</span>
+            </div>
+            <h1>Build layouts with <span class="gradient-text">intent</span>, not pixels</h1>
+            <p class="lead">
+              Stop fighting CSS. Joinery gives you semantic layout primitives that compose into any design. Express
+              <em>what</em> something is, not <em>how</em> it looks.
+            </p>
+
+            <div class="cluster" data-justify="center" data-gap="related">
+              <a href="#" class="button button--primary button--lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                npx joinery init
+              </a>
+              <a href="#" class="button button--secondary button--lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                Watch Demo
+              </a>
+            </div>
+
+            <p class="muted"><small>Free forever. MIT Licensed. ~3KB gzipped.</small></p>
+          </div>
+        </div>
+
+        <div class="center" data-measure="prose">
+          <div class="code-window">
+            <div class="code-header">
+              <div class="code-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <span class="code-title">App.jsx</span>
+            </div>
+            <pre
+              class="code-body"><code><span class="code-keyword">import</span> { Stack, Center, Grid, Box } <span class="code-keyword">from</span> <span class="code-string">'joinery'</span>
+
+<span class="code-keyword">function</span> <span class="code-function">Dashboard</span>() {
+  <span class="code-keyword">return</span> (
+    &lt;<span class="code-component">Center</span> <span class="code-prop">measure</span>=<span class="code-string">"wide"</span>&gt;
+      &lt;<span class="code-component">Stack</span> <span class="code-prop">gap</span>=<span class="code-string">"section"</span>&gt;
+        &lt;<span class="code-component">Header</span> /&gt;
+        &lt;<span class="code-component">Grid</span> <span class="code-prop">min</span>=<span class="code-string">"md"</span> <span class="code-prop">gap</span>=<span class="code-string">"related"</span>&gt;
+          &lt;<span class="code-component">Box</span> <span class="code-prop">pattern</span>=<span class="code-string">"card"</span>&gt;Revenue&lt;/<span class="code-component">Box</span>&gt;
+          &lt;<span class="code-component">Box</span> <span class="code-prop">pattern</span>=<span class="code-string">"card"</span>&gt;Users&lt;/<span class="code-component">Box</span>&gt;
+          &lt;<span class="code-component">Box</span> <span class="code-prop">pattern</span>=<span class="code-string">"card"</span>&gt;Growth&lt;/<span class="code-component">Box</span>&gt;
+        &lt;/<span class="code-component">Grid</span>&gt;
+      &lt;/<span class="code-component">Stack</span>&gt;
+    &lt;/<span class="code-component">Center</span>&gt;
+  )
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="box" data-padding="section" data-border="none">
+        <div class="center" data-measure="wide">
+          <div class="grid" data-min="sm" data-gap="distinct">
+            <div class="stack" data-gap="tight" style="text-align: center">
+              <span class="stat-number">3KB</span>
+              <span class="stat-label">Gzipped</span>
+            </div>
+            <div class="stack" data-gap="tight" style="text-align: center">
+              <span class="stat-number">0</span>
+              <span class="stat-label">Dependencies</span>
+            </div>
+            <div class="stack" data-gap="tight" style="text-align: center">
+              <span class="stat-number">12</span>
+              <span class="stat-label">Primitives</span>
+            </div>
+            <div class="stack" data-gap="tight" style="text-align: center">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Possibilities</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section--muted">
+        <div class="center" data-measure="wide">
+          <div class="stack" data-gap="section">
+            <div class="center" data-intrinsic>
+              <div class="stack" data-gap="related" style="text-align: center">
+                <div>
+                  <span class="badge badge--outline">Features</span>
+                </div>
+                <h2>Everything you need. Nothing you don't.</h2>
+                <p class="lead">Built on the principles of Every Layout, extended for modern applications.</p>
+              </div>
+            </div>
+
+            <div class="grid" data-min="md" data-gap="related">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                </div>
+                <h3>Composable Primitives</h3>
+                <p>
+                  Small, focused layouts that combine into any interface. Stack, Cluster, Grid, Center, Box — and more.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <h3>Semantic Spacing</h3>
+                <p>
+                  Express relationships, not pixels. <code>gap="related"</code> instead of <code>gap-4</code>. Intent
+                  over implementation.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <h3>Zero Runtime</h3>
+                <p>
+                  Pure CSS. No JavaScript overhead. Works with any framework or none at all. Progressively enhanced.
+                </p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                </div>
+                <h3>Prose-First</h3>
+                <p>Content is readable by default. No utility classes needed for basic typography. Opt out, not in.</p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3>Copy & Own</h3>
+                <p>Files live in your project. Customize freely. No node_modules dependency. You own the code.</p>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+                  </svg>
+                </div>
+                <h3>Fluid Typography</h3>
+                <p>
+                  Text scales smoothly using <code>clamp()</code>. No breakpoints, no jarring jumps. Works everywhere.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="primitives" class="box" data-padding="section" data-border="none">
+        <div class="center" data-measure="wide">
+          <div class="stack" data-gap="section">
+            <div class="center" data-intrinsic>
+              <div class="stack" data-gap="related" style="text-align: center">
+                <div>
+                  <span class="badge badge--outline">Primitives</span>
+                </div>
+                <h2>12 layouts. Infinite combinations.</h2>
+                <p class="lead">Each primitive does one thing well. Compose them for any interface.</p>
+              </div>
+            </div>
+
+            <div class="primitive-grid">
+              <div class="primitive-card">
+                <div class="primitive-preview primitive-preview--stack">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="stack" data-gap="tight">
+                  <strong>Stack</strong>
+                  <small>Vertical flow</small>
+                </div>
+              </div>
+
+              <div class="primitive-card">
+                <div class="primitive-preview primitive-preview--cluster">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="stack" data-gap="tight">
+                  <strong>Cluster</strong>
+                  <small>Horizontal wrap</small>
+                </div>
+              </div>
+
+              <div class="primitive-card">
+                <div class="primitive-preview primitive-preview--grid">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="stack" data-gap="tight">
+                  <strong>Grid</strong>
+                  <small>Auto-fit columns</small>
+                </div>
+              </div>
+
+              <div class="primitive-card">
+                <div class="primitive-preview primitive-preview--center">
+                  <div></div>
+                </div>
+                <div class="stack" data-gap="tight">
+                  <strong>Center</strong>
+                  <small>Horizontal center</small>
+                </div>
+              </div>
+
+              <div class="primitive-card">
+                <div class="primitive-preview primitive-preview--box">
+                  <div></div>
+                </div>
+                <div class="stack" data-gap="tight">
+                  <strong>Box</strong>
+                  <small>Padded container</small>
+                </div>
+              </div>
+
+              <div class="primitive-card">
+                <div class="primitive-preview primitive-preview--sidebar">
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="stack" data-gap="tight">
+                  <strong>Sidebar</strong>
+                  <small>Side + main</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example: Dashboard Cards -->
+      <section class="section--muted">
+        <div class="center" data-measure="wide">
+          <div class="stack" data-gap="section">
+            <div class="center" data-intrinsic>
+              <div class="stack" data-gap="related" style="text-align: center">
+                <div>
+                  <span class="badge badge--outline">In Action</span>
+                </div>
+                <h2>Build real interfaces</h2>
+                <p class="lead">See how primitives compose into production-ready components.</p>
+              </div>
+            </div>
+
+            <!-- Dashboard Example -->
+            <div class="example-container">
+              <div class="example-label">Dashboard Cards — Grid + Box + Stack + Cluster</div>
+              <div class="grid" data-min="md" data-gap="related">
+                <div class="dashboard-card">
+                  <div class="stack" data-gap="related">
+                    <div class="cluster" data-justify="between" data-align="center">
+                      <span class="dashboard-card-label">Revenue</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        style="color: var(--muted-foreground)">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                      </svg>
+                    </div>
+                    <div class="stack" data-gap="tight">
+                      <span class="dashboard-card-value">$45,231.89</span>
+                      <span class="dashboard-card-change dashboard-card-change--up">+20.1% from last month</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dashboard-card">
+                  <div class="stack" data-gap="related">
+                    <div class="cluster" data-justify="between" data-align="center">
+                      <span class="dashboard-card-label">Subscriptions</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        style="color: var(--muted-foreground)">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
+                    <div class="stack" data-gap="tight">
+                      <span class="dashboard-card-value">+2,350</span>
+                      <span class="dashboard-card-change dashboard-card-change--up">+180.1% from last month</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dashboard-card">
+                  <div class="stack" data-gap="related">
+                    <div class="cluster" data-justify="between" data-align="center">
+                      <span class="dashboard-card-label">Sales</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        style="color: var(--muted-foreground)">
+                        <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                        <line x1="2" y1="10" x2="22" y2="10"></line>
+                      </svg>
+                    </div>
+                    <div class="stack" data-gap="tight">
+                      <span class="dashboard-card-value">+12,234</span>
+                      <span class="dashboard-card-change dashboard-card-change--up">+19% from last month</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dashboard-card">
+                  <div class="stack" data-gap="related">
+                    <div class="cluster" data-justify="between" data-align="center">
+                      <span class="dashboard-card-label">Active Now</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        style="color: var(--muted-foreground)">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                      </svg>
+                    </div>
+                    <div class="stack" data-gap="tight">
+                      <span class="dashboard-card-value">+573</span>
+                      <span class="dashboard-card-change dashboard-card-change--up">+201 since last hour</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Grid Example -->
+            <div class="example-container">
+              <div class="example-label">Team Grid — Grid + Stack + Cluster</div>
+              <div class="example-content">
+                <div class="grid" data-min="md" data-gap="related">
+                  <div class="team-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face"
+                      alt="Tom Cook"
+                      class="team-avatar" />
+                    <div class="stack" data-gap="tight">
+                      <strong>Tom Cook</strong>
+                      <small class="muted">Director of Product</small>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&crop=face"
+                      alt="Whitney Francis"
+                      class="team-avatar" />
+                    <div class="stack" data-gap="tight">
+                      <strong>Whitney Francis</strong>
+                      <small class="muted">Copywriter</small>
+                    </div>
+                  </div>
+
+                  <div class="team-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=120&h=120&fit=crop&crop=face"
+                      alt="Leonard Krasner"
+                      class="team-avatar" />
+                    <div class="stack" data-gap="tight">
+                      <strong>Leonard Krasner</strong>
+                      <small class="muted">Senior Designer</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Bar Example -->
+            <div class="example-container">
+              <div class="example-label">Action Bar — Cluster with semantic gaps</div>
+              <div class="example-content">
+                <div class="action-bar">
+                  <div class="cluster" data-justify="between" data-align="center">
+                    <div class="cluster" data-gap="tight">
+                      <button class="button button--secondary button--sm">
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                        Back
+                      </button>
+                    </div>
+                    <div class="cluster" data-gap="tight">
+                      <button class="button button--ghost button--sm">Cancel</button>
+                      <button class="button button--ghost button--sm">Save Draft</button>
+                      <button class="button button--primary button--sm">
+                        Publish
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Example -->
+      <section class="box" data-padding="section" data-border="none">
+        <div class="center" data-measure="wide">
+          <div class="stack" data-gap="section">
+            <div class="center" data-intrinsic>
+              <div class="stack" data-gap="related" style="text-align: center">
+                <div>
+                  <span class="badge badge--outline">Forms</span>
+                </div>
+                <h2>Layouts that just work</h2>
+                <p class="lead">Stack and Grid handle form layout without extra thought.</p>
+              </div>
+            </div>
+
+            <div class="box" data-padding="distinct" data-pattern="card">
+              <div class="stack" data-gap="distinct">
+                <h3>Contact Us</h3>
+
+                <div class="grid" data-min="md" data-gap="distinct">
+                  <div class="stack" data-gap="related">
+                    <div class="stack" data-gap="tight">
+                      <label for="firstName">First Name</label>
+                      <input type="text" id="firstName" placeholder="John" class="input" />
+                    </div>
+                    <div class="stack" data-gap="tight">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" id="lastName" placeholder="Doe" class="input" />
+                    </div>
+                    <div class="stack" data-gap="tight">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" placeholder="john@example.com" class="input" />
+                    </div>
+                    <div class="stack" data-gap="tight">
+                      <label for="company">Company</label>
+                      <input type="text" id="company" placeholder="Acme Inc." class="input" />
+                    </div>
+                  </div>
+
+                  <div class="stack" data-gap="related">
+                    <div class="stack" data-gap="tight">
+                      <label for="subject">Subject</label>
+                      <select id="subject" class="input">
+                        <option>General Inquiry</option>
+                        <option>Technical Support</option>
+                        <option>Enterprise Sales</option>
+                        <option>Partnership</option>
+                      </select>
+                    </div>
+                    <div class="stack" data-gap="tight" style="flex: 1">
+                      <label for="message">Message</label>
+                      <textarea id="message" rows="5" placeholder="How can we help?" class="input"></textarea>
+                    </div>
+                    <div class="cluster" data-justify="between" data-align="center">
+                      <label class="checkbox">
+                        <input type="checkbox" />
+                        <span>Send me updates</span>
+                      </label>
+                      <button class="button button--primary">Send Message</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section--muted">
+        <div class="center" data-measure="wide">
+          <div class="stack" data-gap="section">
+            <div class="center" data-intrinsic>
+              <div class="stack" data-gap="related" style="text-align: center">
+                <div>
+                  <span class="badge badge--outline">Testimonials</span>
+                </div>
+                <h2>Loved by developers</h2>
+              </div>
+            </div>
+
+            <div class="grid" data-min="md" data-gap="related">
+              <div class="testimonial-card">
+                <div class="stack" data-gap="related">
+                  <p>
+                    "Finally, a CSS approach that makes sense. I stopped fighting the cascade and started expressing
+                    intent."
+                  </p>
+                  <div class="cluster" data-gap="related">
+                    <div class="testimonial-avatar">SC</div>
+                    <div class="stack" data-gap="none">
+                      <strong>Sarah Chen</strong>
+                      <small class="muted">Frontend Lead, Stripe</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="stack" data-gap="related">
+                  <p>
+                    "The semantic spacing tokens are genius. <code>gap='related'</code> is so much more meaningful than
+                    <code>gap-4</code>."
+                  </p>
+                  <div class="cluster" data-gap="related">
+                    <div class="testimonial-avatar">MK</div>
+                    <div class="stack" data-gap="none">
+                      <strong>Marcus Kim</strong>
+                      <small class="muted">Design Engineer, Linear</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="stack" data-gap="related">
+                  <p>
+                    "3KB and zero dependencies? In a world of bloated frameworks, Joinery is a breath of fresh air."
+                  </p>
+                  <div class="cluster" data-gap="related">
+                    <div class="testimonial-avatar">AR</div>
+                    <div class="stack" data-gap="none">
+                      <strong>Alex Rivera</strong>
+                      <small class="muted">Indie Developer</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="box" data-padding="section" data-border="none">
+        <div class="center" data-measure="wide">
+          <div class="stack" data-gap="section">
+            <div class="center" data-intrinsic>
+              <div class="stack" data-gap="related" style="text-align: center">
+                <div>
+                  <span class="badge badge--outline">Pricing</span>
+                </div>
+                <h2>Free forever. Seriously.</h2>
+                <p class="lead">Joinery is open source and MIT licensed.</p>
+              </div>
+            </div>
+
+            <div class="grid" data-min="md" data-gap="related">
+              <div class="pricing-card">
+                <div class="stack" data-gap="distinct">
+                  <div class="stack" data-gap="tight">
+                    <h3>Open Source</h3>
+                    <p class="muted">For everyone</p>
+                  </div>
+                  <div class="cluster" data-align="baseline" data-gap="tight">
+                    <span class="pricing-amount">$0</span>
+                    <span class="muted">forever</span>
+                  </div>
+                  <ul class="stack" data-gap="tight">
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      All 12 primitives
+                    </li>
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      React components
+                    </li>
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Full documentation
+                    </li>
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      MIT License
+                    </li>
+                  </ul>
+                  <button class="button button--secondary" style="width: 100%">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    View on GitHub
+                  </button>
+                </div>
+              </div>
+
+              <div class="pricing-card pricing-card--featured">
+                <div class="pricing-badge">Popular</div>
+                <div class="stack" data-gap="distinct">
+                  <div class="stack" data-gap="tight">
+                    <h3>Pro Templates</h3>
+                    <p class="muted">For teams & agencies</p>
+                  </div>
+                  <div class="cluster" data-align="baseline" data-gap="tight">
+                    <span class="pricing-amount">$49</span>
+                    <span class="muted">one-time</span>
+                  </div>
+                  <ul class="stack" data-gap="tight">
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Everything in Open Source
+                    </li>
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      10+ page templates
+                    </li>
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Dashboard starter
+                    </li>
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Priority support
+                    </li>
+                  </ul>
+                  <button class="button button--primary" style="width: 100%">
+                    Get Templates
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="pricing-card">
+                <div class="stack" data-gap="distinct">
+                  <div class="stack" data-gap="tight">
+                    <h3>Enterprise</h3>
+                    <p class="muted">For large organizations</p>
+                  </div>
+                  <div class="cluster" data-align="baseline" data-gap="tight">
+                    <span class="pricing-amount">Custom</span>
+                  </div>
+                  <ul class="stack" data-gap="tight">
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Everything in Pro
+                    </li>
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Custom primitives
+                    </li>
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Team training
+                    </li>
+                    <li class="feature-list-item">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      SLA & support
+                    </li>
+                  </ul>
+                  <button class="button button--secondary" style="width: 100%">Contact Sales</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section--muted">
+        <div class="center">
+          <div class="stack" data-gap="section">
+            <h2 style="text-align: center">Frequently asked questions</h2>
+
+            <div class="stack" data-gap="related">
+              <details class="faq-item" open>
+                <summary>How is this different from Tailwind CSS?</summary>
+                <p>
+                  Tailwind gives you utility classes for any CSS property. Joinery gives you semantic layout primitives.
+                  They work great together — use Joinery for structure, Tailwind for styling.
+                </p>
+              </details>
+              <details class="faq-item">
+                <summary>Do I need to use React?</summary>
+                <p>
+                  No! Joinery is CSS-first. The React components are thin wrappers. You can use plain HTML with CSS
+                  classes, or any framework.
+                </p>
+              </details>
+              <details class="faq-item">
+                <summary>What browsers are supported?</summary>
+                <p>
+                  All modern browsers. The CSS uses <code>gap</code>, <code>clamp()</code>, and CSS custom properties.
+                </p>
+              </details>
+              <details class="faq-item">
+                <summary>Can I customize the spacing tokens?</summary>
+                <p>Absolutely. Override the CSS custom properties. The files live in your project.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="center" data-intrinsic>
+          <div class="stack" data-gap="distinct" style="text-align: center">
+            <h2 style="color: white">Start building with intent</h2>
+            <p style="color: rgba(255, 255, 255, 0.8)">Get up and running in under a minute.</p>
+            <div class="code-inline">npx joinery init</div>
+            <div class="cluster" data-justify="center" data-gap="related">
+              <a href="#" class="button button--white">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                Star on GitHub
+              </a>
+              <a
+                href="#"
+                class="button"
+                style="color: white; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent">
+                Read the Docs
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="center" data-measure="wide">
+        <div class="stack" data-gap="section">
+          <div class="grid" data-min="sm" data-gap="distinct">
+            <div class="stack" data-gap="related">
+              <a href="/" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                Joinery
+              </a>
+              <p class="muted" style="max-width: 25ch">Intent-driven design system with semantic layout primitives.</p>
+              <div class="cluster" data-gap="tight">
+                <a href="#" class="social-link" title="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" title="Twitter">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" title="Discord">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="stack" data-gap="related">
+              <strong>Product</strong>
+              <nav>
+                <ul class="stack" data-gap="tight">
+                  <li><a href="#">Primitives</a></li>
+                  <li><a href="#">Templates</a></li>
+                  <li><a href="#">Examples</a></li>
+                  <li><a href="#">Changelog</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="stack" data-gap="related">
+              <strong>Resources</strong>
+              <nav>
+                <ul class="stack" data-gap="tight">
+                  <li><a href="#">Documentation</a></li>
+                  <li><a href="#">Getting Started</a></li>
+                  <li><a href="#">API Reference</a></li>
+                  <li><a href="#">Every Layout</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="stack" data-gap="related">
+              <strong>Company</strong>
+              <nav>
+                <ul class="stack" data-gap="tight">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <hr style="border: none; border-top: 1px solid var(--border)" />
+          <div class="cluster" data-justify="between">
+            <small class="muted">© 2024 Joinery. MIT License.</small>
+            <div class="cluster" data-gap="related">
+              <a href="#" class="muted"><small>Privacy</small></a>
+              <a href="#" class="muted"><small>Terms</small></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

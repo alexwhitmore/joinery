@@ -1,0 +1,31 @@
+{
+  "name": "@joinery/tokens",
+  "version": "0.1.0",
+  "description": "Design tokens for Joinery - semantic spacing, typography, and elevation",
+  "type": "module",
+  "main": "./dist/index.css",
+  "exports": {
+    ".": "./dist/index.css",
+    "./spacing": "./dist/spacing.css",
+    "./typography": "./dist/typography.css",
+    "./measure": "./dist/measure.css",
+    "./elevation": "./dist/elevation.css",
+    "./radius": "./dist/radius.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "mkdir -p dist && cp src/*.css dist/",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "design-tokens",
+    "css",
+    "design-system"
+  ],
+  "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ]
+}
